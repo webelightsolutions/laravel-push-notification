@@ -13,7 +13,7 @@ class CreateNotificationLogsTable extends Migration
      */
     public function up()
     {
-        Schema::create('notification_logs', function(Blueprint $table) {
+        Schema::create('notification_logs', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->longtext('device_token')->nullable();
