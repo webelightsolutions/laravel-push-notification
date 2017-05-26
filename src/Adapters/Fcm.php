@@ -42,12 +42,15 @@ class Fcm
                 'method'  => 'POST',
                 'header'  => "Authorization: key={$this->authKey}\r\n"."Content-Type: application/json\r\n",
                 'content' => json_encode($postData),
-             ],
+                ],
         ];
 
         return stream_context_create($streamOptions);
     }
 
+    /**
+     * @param string $data
+     */
     public function logResponse($data, $deviceToken, $message, $action)
     {
         $response = json_decode($data);
