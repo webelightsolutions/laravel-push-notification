@@ -1,12 +1,13 @@
 <?php
+
 namespace Webelightdev\LaravelPushNotification\Classes;
 
-use Webelightdev\LaravelPushNotification\Jobs\PushNotificationJob;
 use Illuminate\Support\Facades\Queue;
+use Webelightdev\LaravelPushNotification\Jobs\PushNotificationJob;
 
 /**
-* Push Notification Class
-*/
+ * Push Notification Class.
+ */
 class PushNotificationClass
 {
     public function send($deviceTokens, $message, $action)

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    /**
+    /*
      * Default Cloud Messaging Service
      *
      * Here you may specify the default service that should be used
@@ -11,7 +11,7 @@ return [
      */
     'default' => 'fcm',
 
-    /**
+    /*
      * Adapter Class
      *
      * Here you can add current adapter class path which provides
@@ -19,7 +19,7 @@ return [
      */
     'adapter' => \Webelightdev\LaravelPushNotification\Adapters\Fcm::class,
 
-    /**
+    /*
      * Cloud Messaging Services
      *
      * Here you may configure as many service "services" as you wish,
@@ -27,12 +27,12 @@ return [
      */
     'services' => [
         'fcm' => [
-            'url' => env('FCM_URL', 'https://fcm.googleapis.com/fcm/send'),
-            'auth_key' => env('FCM_AUTH_KEY', '')
-        ]
+            'url'      => env('FCM_URL', 'https://fcm.googleapis.com/fcm/send'),
+            'auth_key' => env('FCM_AUTH_KEY', ''),
+        ],
     ],
 
-    /**
+    /*
      * Notification Logs
      *
      * Here you may configure log table for logging out Push Notification status.

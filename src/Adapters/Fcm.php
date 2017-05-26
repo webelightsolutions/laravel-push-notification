@@ -1,11 +1,12 @@
 <?php
+
 namespace Webelightdev\LaravelPushNotification\Adapters;
 
 use Webelightdev\LaravelPushNotification\Facades\LogNotification;
 
 /**
-* Firebase Cloud Messaging Adapter
-*/
+ * Firebase Cloud Messaging Adapter.
+ */
 class Fcm
 {
     protected $url;
@@ -38,11 +39,12 @@ class Fcm
 
         $streamOptions = [
             'http' => [
-                'method' => 'POST',
-                'header' => "Authorization: key={$this->authKey}\r\n"."Content-Type: application/json\r\n",
+                'method'  => 'POST',
+                'header'  => "Authorization: key={$this->authKey}\r\n"."Content-Type: application/json\r\n",
                 'content' => json_encode($postData),
              ],
         ];
+
         return stream_context_create($streamOptions);
     }
 

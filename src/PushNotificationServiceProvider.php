@@ -18,7 +18,7 @@ class PushNotificationServiceProvider extends ServiceProvider
         // Config
         $this->publishes([__DIR__.'/../config/push-notification.php' => config_path('push-notification.php')]);
         // Migration
-        $this->publishes([__DIR__ .'/../database/migrations' => $this->app->databasePath() . '/migrations'], 'migrations');
+        $this->publishes([__DIR__.'/../database/migrations' => $this->app->databasePath().'/migrations'], 'migrations');
     }
 
     /**
@@ -30,11 +30,11 @@ class PushNotificationServiceProvider extends ServiceProvider
     {
         // Push Notification Service
         $this->app->bind('push-notification', function () {
-            return new PushNotificationClass;
+            return new PushNotificationClass();
         });
         // Log Notification Service
         $this->app->bind('log-notification', function () {
-            return new LogNotificationClass;
+            return new LogNotificationClass();
         });
     }
 }
