@@ -29,11 +29,11 @@ class PushNotificationServiceProvider extends ServiceProvider
     public function register()
     {
         // Push Notification Service
-        $this->app->bind('push-notification', function() {
+        $this->app->bind('push-notification', function () {
             return new PushNotificationClass();
         });
         // Log Notification Service
-        $this->app->bind('log-notification', function() {
+        $this->app->bind('log-notification', function () {
             return new LogNotificationClass();
         });
     }
