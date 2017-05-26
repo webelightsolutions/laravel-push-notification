@@ -1,11 +1,12 @@
 <?php
+
 namespace Webelightdev\LaravelPushNotification\Classes;
 
 use Illuminate\Support\Facades\DB;
 
 /**
-* Log Notification Class
-*/
+ * Log Notification Class.
+ */
 class LogNotificationClass
 {
     protected $log;
