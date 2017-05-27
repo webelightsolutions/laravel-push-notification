@@ -44,5 +44,8 @@ Finally, run migration to generate Notification Log table
 php artisan migrate
 ```
 
+Latest snapshot of Push Notification for one of our client using laravel-push-notification plugin
+![img](http://i.imgur.com/IsKFkWW.jpg)
+
 ## License
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
