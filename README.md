@@ -35,7 +35,7 @@ Webelightdev\LaravelPushNotification\PushNotificationServiceProvider::class,
 
 To publish the Config, Migration, Service Provider and Facades
 ```
-php artisan vendor:publish"
+php artisan vendor:publish
 ```
 
 Finally, run migration to generate Notification Log table
