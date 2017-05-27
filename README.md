@@ -38,5 +38,11 @@ To publish the Config, Migration, Service Provider and Facades
 ```
 php artisan vendor:publish"
 ```
+
+Finally, run migration to generate Notification Log table
+```
+php artisan migrate
+```
+
 ## License
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
