@@ -1,10 +1,9 @@
 # laravel-push-notification
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://scrutinizer-ci.com/g/webelightdev/laravel-push-notification/badges/build.png?b=master)](https://scrutinizer-ci.com/g/webelightdev/laravel-push-notification/build-status/master)
-[![StyleCI](https://styleci.io/repos/68374707/shield)](https://styleci.io/repos/68374707/shield)
+[![Latest Stable Version](https://poser.pugx.org/webelightdev/laravel-push-notification/v/stable)](https://packagist.org/packages/webelightdev/laravel-push-notification)
+[![Latest Unstable Version](https://poser.pugx.org/webelightdev/laravel-push-notification/v/unstable)](https://packagist.org/packages/webelightdev/laravel-push-notification)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webelightdev/laravel-push-notification/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/webelightdev/laravel-push-notification/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/webelightdev/laravel-push-notification/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/webelightdev/laravel-push-notification/?branch=master)
-[![Total Downloads](https://img.shields.io/packagist/dt/webelightdev/laravel-push-notification.svg?style=flat-square)](https://packagist.org/packages/webelightdev/laravel-push-notification)
+[![Total Downloads](https://poser.pugx.org/webelightdev/laravel-push-notification/downloads)](https://packagist.org/packages/webelightdev/laravel-push-notification)
+[![License](https://poser.pugx.org/webelightdev/laravel-push-notification/license)](https://packagist.org/packages/webelightdev/laravel-push-notification)
 
 Push Notifications using Laravel
 ```
