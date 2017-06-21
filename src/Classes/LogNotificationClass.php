@@ -9,30 +9,30 @@ use Illuminate\Support\Facades\DB;
  */
 class LogNotificationClass
 {
-    protected $log;
+    protected $logTable;
 
     public function __construct()
     {
-        $this->log = config('push-notification.logs.table');
+        $this->logTable = config('push-notification.logs.table');
     }
 
     public function info($deviceToken, $notification, $errorMessage = null)
     {
-        DB::table($this->log)->insert([
-            'device_token'         => $deviceToken,
-            'notification_message' => $notification,
-            'error_message'        => $errorMessage,
-            'status'               => 'success',
-        ]);
+        $this->log($deviceToken, $notification, $errorMessage, 'success');
     }
 
     public function error($deviceToken, $notification, $errorMessage)
     {
-        DB::table($this->log)->insert([
+        $this->log($deviceToken, $notification, $errorMessage, 'failure');
+    }
+
+    public function log($deviceToken, $notification, $errorMessage, $status)
+    {
+        DB::table($this->logTable)->insert([
             'device_token'         => $deviceToken,
             'notification_message' => $notification,
             'error_message'        => $errorMessage,
-            'status'               => 'failure',
+            'status'               => $status,
         ]);
     }
 }
