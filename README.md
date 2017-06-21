@@ -47,4 +47,4 @@ Latest snapshot of Push Notification for one of our client using laravel-push-no
 ![img](http://i.imgur.com/IsKFkWW.jpg)
 
 ## License
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
