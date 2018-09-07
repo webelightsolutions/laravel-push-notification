@@ -45,5 +45,5 @@ return [
 
     'moduleEnable' => [
         'notification' => true,
-    ]
+    ],
 ];
