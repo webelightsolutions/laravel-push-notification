@@ -12,6 +12,12 @@ class PushNotificationClass
 {
     public function send($deviceTokens, $message, $action)
     {
-        Queue::push(new PushNotificationJob($deviceTokens, $message, $action));
+        $notificationEnable = config('push-notification.moduleEnable.notification');
+
+        if ($notificationEnable) {
+            Queue::push(new PushNotificationJob($deviceTokens, $message, $action));
+        }
+
+        return response()->json(['message' => $message]);
     }
 }
