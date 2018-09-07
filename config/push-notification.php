@@ -42,4 +42,8 @@ return [
     'logs' => [
         'table' => 'notification_logs',
     ],
+
+    'moduleEnable' => [
+        'notification' => true,
+    ],
 ];
