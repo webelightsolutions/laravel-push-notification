@@ -10,12 +10,12 @@ use Webelightdev\LaravelPushNotification\Jobs\PushNotificationJob;
  */
 class PushNotificationClass
 {
-    public function send($deviceTokens, $message, $action)
+    public function send($deviceTokens, $message, $action, $title = null)
     {
         $notificationEnable = config('push-notification.moduleEnable.notification');
 
         if ($notificationEnable) {
-            Queue::push(new PushNotificationJob($deviceTokens, $message, $action));
+            Queue::push(new PushNotificationJob($deviceTokens, $message, $action , $title));
         }
 
         return response()->json(['message' => $message]);
