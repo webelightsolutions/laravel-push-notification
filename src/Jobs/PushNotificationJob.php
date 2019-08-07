@@ -15,17 +15,19 @@ class PushNotificationJob implements ShouldQueue
     protected $deviceTokens;
     protected $message;
     protected $action;
+    protected $title;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($deviceTokens, $message, $action)
+    public function __construct($deviceTokens, $message, $action, $title = null)
     {
         $this->deviceTokens = $deviceTokens;
         $this->message = $message;
         $this->action = $action;
+        $this->title = $title;
     }
 
     /**
@@ -37,6 +39,6 @@ class PushNotificationJob implements ShouldQueue
     {
         $adapter = config('push-notification.adapter');
         $objAdapter = new $adapter();
-        $objAdapter->pushNotification($this->deviceTokens, $this->message, $this->action);
+        $objAdapter->pushNotification($this->deviceTokens, $this->message, $this->action, $this->title);
     }
 }

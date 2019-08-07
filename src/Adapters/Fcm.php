@@ -18,23 +18,26 @@ class Fcm
         $this->authKey = config('push-notification.services.fcm.auth_key');
     }
 
-    public function pushNotification($deviceTokens, $message, $action)
+    public function pushNotification($deviceTokens, $message, $action, $title = null)
     {
         foreach ($deviceTokens as $deviceToken) {
-            $response = $this->callService($deviceToken, $message, $action);
+            $response = $this->callService($deviceToken, $message, $action, $title);
             $this->logResponse($response, $deviceToken, $message, $action);
         }
     }
 
-    public function callService($deviceToken, $message, $action)
+    public function callService($deviceToken, $message, $action, $title = null)
     {
-        return file_get_contents($this->url, false, $this->setStream($deviceToken, $message, $action));
+        return file_get_contents($this->url, false, $this->setStream($deviceToken, $message, $action, $title));
     }
 
-    public function setStream($deviceToken, $message, $action)
+    public function setStream($deviceToken, $message, $action, $title = null)
     {
         $postData['to'] = $deviceToken;
-        $postData['data']['message'] = $message;
+        $postData['notification']['body'] = $message;
+        $postData['notification']['title'] = $title;
+        $postData['data']['body'] = $message;
+        $postData['data']['title'] = $title;
         $postData['data']['click_action'] = $action;
 
         $streamOptions = [
