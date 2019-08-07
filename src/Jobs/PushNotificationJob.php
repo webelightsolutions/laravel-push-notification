@@ -36,7 +36,7 @@ class PushNotificationJob implements ShouldQueue
      * @return void
      */
     public function handle()
-    { 
+    {
         $adapter = config('push-notification.adapter');
         $objAdapter = new $adapter();
         $objAdapter->pushNotification($this->deviceTokens, $this->message, $this->action, $this->title);

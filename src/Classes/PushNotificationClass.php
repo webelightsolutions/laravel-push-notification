@@ -15,7 +15,7 @@ class PushNotificationClass
         $notificationEnable = config('push-notification.moduleEnable.notification');
 
         if ($notificationEnable) {
-            Queue::push(new PushNotificationJob($deviceTokens, $message, $action , $title));
+            Queue::push(new PushNotificationJob($deviceTokens, $message, $action, $title));
         }
 
         return response()->json(['message' => $message]);
